@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    --header-height: 60px;
+    --toolbar-height: 50px;
+    --bottom-bar-height: 36px;
+    --grid-width: 100%;
+    --grid-height: calc(
+      100% -
+        calc(
+          var(--header-height) + var(--bottom-bar-height) + var(--toolbar-height)
+        )
+    );
+  }
+
+  * {
+    @apply m-0 p-0 box-border;
+  }
+
+  html {
+    @apply h-full;
+  }
+
+  body {
+    @apply font-regular h-full;
+  }
+
+.loader {
+    @apply flex w-9 h-9 border-[5px] border-green-400 border-b-transparent rounded-full animate-spin;
+  }
