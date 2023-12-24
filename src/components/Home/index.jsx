@@ -1,5 +1,10 @@
+import BioSection from "./BioSection";
 const Home = () => {
-    return <>Main section</>
+    return (
+        <div className="">
+            <BioSection />
+        </div>
+    )
 }
 
 export default Home;

@@ -10,16 +10,22 @@ import { MyRoutes } from "./routes";
 import Header from './components/Header/index';
 import Footer from "./components/Footer";
 import NotFound from "./components/NotFound";
-
+import useDarkMode from "./utils/hooks/useDarkMode";
+import ThemeContext from "./utils/ThemeContext";
+import { useContext } from "react";
 const AppLayout = () => {
+    const [darkMode, handleDarkMode] = useDarkMode();
     return (
-        <div className="app">
-            <Header />
-            <div className="h-24 min-h-full" style={{ minHeight: "36rem" }}>
-                <Outlet />
+        <ThemeContext.Provider value={{ darkMode, handleDarkMode }} >
+            <div className={`portfolio ${darkMode && 'dark'}`}>
+                <Header />
+                <div className="min-h-full my-20 flex flex-col" style={{ minHeight: "35rem" }}>
+                    <Outlet />
+                </div>
+                <Footer />
             </div>
-            <Footer />
-        </div>
+        </ThemeContext.Provider>
+
     );
 };
 
