@@ -5,18 +5,23 @@ import mePattern from "./../../assets/img/me-pattern.jpg"
 import mePatternWhite from "./../../assets/img/me-pattern-white.jpg"
 import useDarkMode from '../../utils/hooks/useDarkMode'
 import ThemeContext from './../../utils/ThemeContext';
+import HorizontalScroll from '../HorizontalScroll'
 function BioSection() {
     const { darkMode } = useContext(ThemeContext)
-
-    console.log(darkMode)
     return (
-        <div className='flex place-content-between m-20 '>
-            <div>
-                <Bio />
-            </div>
-            <div>
-                <img src={darkMode ? mePattern : mePatternWhite} alt="Saurabh Ranjan" />
-            </div>
+        <div className='m-20 flex justify-center flex-col'>
+            <Bio />
+
+            <HorizontalScroll>
+                <div>item 1</div>
+                <div>item 2</div>
+                <div>item 3</div>
+                <div>item 4</div>
+                <div>item 5</div>
+                <div>item 6</div>
+                <div>item 7</div>
+                <div>item 8</div>
+            </HorizontalScroll>
         </div>
     )
 }
