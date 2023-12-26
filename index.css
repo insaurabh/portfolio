@@ -35,21 +35,6 @@
     @apply bg-gray-800 text-zinc-50;
  }
 
- .horizontal-scroll-wrapper {
-  /* width: 500px;
-  height: 20px; */
-  overflow-y: auto;
-  overflow-x: hidden;
-  background-color: red;
 
-  transform:rotate(-90deg) translateY(-100px);
-  transform-origin: right top;
- }
-
- .horizontal-scroll-wrapper > div {
-  width: 100px;
-  height: 100px;
-
-  transform: rotate(90deg);
-  transform-origin: right top;
-}
+::-webkit-scrollbar{width:2px;height:2px;}
+::-webkit-scrollbar-button{width:2px;height:2px;}

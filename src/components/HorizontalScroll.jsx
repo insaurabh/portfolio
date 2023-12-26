@@ -2,7 +2,7 @@ import React from 'react'
 
 function HorizontalScroll({ children }) {
     return (
-        <div className='horizontal-scroll-wrapper h-24 w-[300]'>
+        <div className="horizontal-scroll-wrapper">
             {children}
         </div>
     )

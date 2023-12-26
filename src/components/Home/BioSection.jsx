@@ -11,17 +11,17 @@ function BioSection() {
     return (
         <div className='m-20 flex justify-center flex-col'>
             <Bio />
-
-            <HorizontalScroll>
-                <div>item 1</div>
-                <div>item 2</div>
-                <div>item 3</div>
-                <div>item 4</div>
-                <div>item 5</div>
-                <div>item 6</div>
-                <div>item 7</div>
-                <div>item 8</div>
-            </HorizontalScroll>
+            {/* <HorizontalScroll>
+                <div className="min-w-64 p-4 bg-gray-200 mr-4">Item 1</div>
+                <div className="min-w-64 p-4 bg-gray-200 mr-4">Item 2</div>
+                <div className="min-w-64 p-4 bg-gray-200 mr-4">Item 3</div>
+                <div className="min-w-64 p-4 bg-gray-200 mr-4">Item 3</div>
+                <div className="min-w-64 p-4 bg-gray-200 mr-4">Item 3</div>
+                <div className="min-w-64 p-4 bg-gray-200 mr-4">Item 3</div>
+                <div className="min-w-64 p-4 bg-gray-200 mr-4">Item 3</div>
+                <div className="min-w-64 p-4 bg-gray-200 mr-4">Item 3</div>
+                <div className="min-w-64 p-4 bg-gray-200 mr-4">Item 3</div>
+            </HorizontalScroll> */}
         </div>
     )
 }
