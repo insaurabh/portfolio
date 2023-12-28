@@ -1,3 +1,10 @@
+
+const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
+const {
+    default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+
 /** @type {import('tailwindcss').Config} */
 export default {
     darkMode: 'class',
@@ -23,9 +30,20 @@ export default {
                     '70%': { transform: 'rotate(4.0deg)' },
                     '100%': { transform: 'rotate(0.0deg)' },
                 },
+                spotlight: {
+                    "0%": {
+                        opacity: 0,
+                        transform: "translate(-72%, -62%) scale(0.5)",
+                    },
+                    "100%": {
+                        opacity: 1,
+                        transform: "translate(-50%,-40%) scale(1)",
+                    },
+                },
             },
             animation: {
-                wave: 'wave 1s  infinite'
+                wave: 'wave 1s  infinite',
+                spotlight: "spotlight 2s ease .75s 1 forwards",
             },
         },
     },
